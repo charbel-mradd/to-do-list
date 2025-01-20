@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Greeting -->
+        <section class="greeting">
+            <h2>Welcome back, <input type="text" id="username" placeholder="Enter your name" /></h2>
+        </section>
+
+        <!-- Create Todo -->
+        <section class="create-todo">
+            <h3>Create a Task</h3>
+            <form id="new-todo-form">
+                <h4>Task Description</h4>
+                <input type="text" name="content" placeholder="e.g. Complete Project" />
+                
+                <h4>Category</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="category" value="personal" />
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" value="business" />
+                        <span class="bubble business"></span>
+                        <div>Business</div>
+                    </label>
+                </div>
+                <input type="submit" value="Add Task" />
+            </form>
+        </section>
+
+        <!-- Todo List -->
+        <section class="todo-list">
+            <h3>Todo List</h3>
+            <div class="list" id="todo-list"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
